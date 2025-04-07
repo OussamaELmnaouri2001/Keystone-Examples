@@ -2,11 +2,11 @@
 
 Chaque exemple contient :
 
-    host/ → code exécuté sur l’hôte (hors enclave)
+*host/* → code exécuté sur l’hôte (hors enclave)
 
-    eapp/ → code exécuté dans l’enclave
+*eapp/* → code exécuté dans l’enclave
 
-    CMakeLists.txt → permet de compiler et packager les deux
+*CMakeLists.txt* → permet de compiler et packager les deux
 
 Pour les compiler dans Keystone :
 
