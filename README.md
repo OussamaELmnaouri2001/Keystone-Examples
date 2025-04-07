@@ -1,4 +1,4 @@
-#Structure des exemples Keystone
+Structure des exemples Keystone
 
 Chaque exemple dans le dépôt suit une structure standard composée de trois éléments principaux :
 
@@ -8,7 +8,7 @@ Chaque exemple dans le dépôt suit une structure standard composée de trois é
 
     CMakeLists.txt : Le fichier de configuration utilisé par CMake pour générer les fichiers de construction nécessaires.
 
-#Intégration des exemples dans Keystone
+Intégration des exemples dans Keystone
 
 Pour intégrer ces exemples dans votre environnement Keystone, suivez les étapes suivantes :
 
@@ -33,5 +33,5 @@ Après avoir ajouté les exemples et modifié le CMakeLists.txt, exécutez la co
 
     Une fois la compilation terminée, vous pouvez exécuter les exemples en lançant QEMU et en suivant les instructions détaillées dans la documentation officielle de Keystone : Keystone Basics.
 
-#Détails des exemples
+Détails des exemples
 Exemple : Addition
