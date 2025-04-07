@@ -2,11 +2,11 @@
 
 Chaque exemple contient :
 
-    host/ → code exécuté sur l’hôte (hors enclave)
+    	- item host/ → code exécuté sur l’hôte (hors enclave)
 
-    eapp/ → code exécuté dans l’enclave
+   	    - item  eapp/ → code exécuté dans l’enclave
 
-    CMakeLists.txt → permet de compiler et packager les deux
+   	    - item  CMakeLists.txt → permet de compiler et packager les deux
 
 Pour les compiler dans Keystone :
 
@@ -16,18 +16,18 @@ Pour les compiler dans Keystone :
 
     Compiler : make -j$(nproc)
 
-    Exécuter avec QEMU (cf. doc officielle)
+    Exécuter avec QEMU (doc officielle : https://docs.keystone-enclave.org/en/latest/Getting-Started/index.html)
 
 # 🔍 Analyse de l’exemple addition
 🔹 host/host.c
 
 Ce fichier gère :
 
-    L'initialisation de l'enclave
+    - item L'initialisation de l'enclave
 
-    L'enregistrement des OCALLs
+  	- item  L'enregistrement des OCALLs
 
-    Le lancement de l’enclave
+  	- item  Le lancement de l’enclave
 
 📌 Étapes importantes :
 
