@@ -2,11 +2,11 @@
 
 Chaque exemple contient :
 
-- item host/ → code exécuté sur l’hôte (hors enclave)
+- host/ → code exécuté sur l’hôte (hors enclave)
 
-- item  eapp/ → code exécuté dans l’enclave
+- eapp/ → code exécuté dans l’enclave
 
-- item  CMakeLists.txt → permet de compiler et packager les deux
+- CMakeLists.txt → permet de compiler et packager les deux
 
 Pour les compiler dans Keystone :
 
@@ -23,11 +23,11 @@ Pour les compiler dans Keystone :
 
 Ce fichier gère :
 
-    - item L'initialisation de l'enclave
+- L'initialisation de l'enclave
 
-  	- item  L'enregistrement des OCALLs
+- L'enregistrement des OCALLs
 
-  	- item  Le lancement de l’enclave
+- Le lancement de l’enclave
 
 📌 Étapes importantes :
 
