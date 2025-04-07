@@ -1,14 +1,23 @@
-**Structure des exemples Keystone**
+# 📁Structure des exemples Keystone
 
-Chaque exemple dans le dépôt suit une structure standard composée de trois éléments principaux :
+Chaque exemple contient :
 
-    eapp : L'application enclavée qui s'exécute dans l'enclave sécurisée.
+    host/ → code exécuté sur l’hôte (hors enclave)
 
-    host : L'application hôte qui interagit avec l'enclave.
+    eapp/ → code exécuté dans l’enclave
 
-    CMakeLists.txt : Le fichier de configuration utilisé par CMake pour générer les fichiers de construction nécessaires.
+    CMakeLists.txt → permet de compiler et packager les deux
 
-**Intégration des exemples dans Keystone**
+Pour les compiler dans Keystone :
+
+    Copier le dossier dans /keystone/examples/
+
+    Ajouter add_subdirectory(nom_du_dossier) dans /keystone/examples/CMakeLists.txt
+
+    Compiler : make -j$(nproc)
+
+    Exécuter avec QEMU (cf. doc officielle)
+# Intégration des exemples dans Keystone
 
 Pour intégrer ces exemples dans votre environnement Keystone, suivez les étapes suivantes :
 
@@ -33,5 +42,5 @@ Après avoir ajouté les exemples et modifié le CMakeLists.txt, exécutez la co
 
     Une fois la compilation terminée, vous pouvez exécuter les exemples en lançant QEMU et en suivant les instructions détaillées dans la documentation officielle de Keystone : Keystone Basics.
 
-**Détails des exemples**
+# Détails des exemples
 Exemple : Addition
