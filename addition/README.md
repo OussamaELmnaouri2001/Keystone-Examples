@@ -1,1 +1,1 @@
-
+Un exemple simple d'application tournant dans un environnement sécurisé Keystone. Il effectue l'addition de deux entiers (2 + 3) et utilise une OCALL pour afficher le résultat à l'extérieur de l'enclave.
