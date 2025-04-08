@@ -17,7 +17,7 @@ Avant de commencer, veuillez vous assurer que :
 
     cd /keystone/examples
 
-### Créer un dossier pour ton projet :
+### Créer un dossier pour le projet :
 
     mkdir my_exemple
     cd my_example
@@ -31,6 +31,7 @@ Avant de commencer, veuillez vous assurer que :
 - eapp/ : Contient le code de l'enclave (le C exécuté de façon isolée).
 - host/ : Contient le code (c++) qui lance et gère l’enclave (initialisation Keystone, Edge calls, etc.).
 - CMakeLists.txt : Décrit la façon dont ton projet sera compilé.
+  
 **Inspiration** : regarde les fichiers CMakeLists.txt des autres exemples (comme addition, password, etc.)
 
 ## Étape d’intégration dans Keystone : 
