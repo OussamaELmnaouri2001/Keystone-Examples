@@ -1,7 +1,7 @@
 # Introduction à Keystone
 
 **Keystone** est une **Trusted Execution Environment (TEE)** open-source conçue pour les architectures RISC-V.conçue pour les architectures **RISC-V**. Elle permet de créer des environnements d'exécution isolés (enclaves) qui peuvent exécuter des applications sensibles en toute sécurité, avec une surface de confiance minimale.
-📄 Documentation officielle : https://docs.keystone-enclave.org  --Version utilisée dans ce projet : Keystone 1.0.0 .
+Documentation officielle : https://docs.keystone-enclave.org  --Version utilisée dans ce projet : Keystone 1.0.0 .
 
 # Créer son propre projet dans Keystone 
 
