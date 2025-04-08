@@ -15,7 +15,7 @@ Avant de commencer, veuillez vous assurer que :
 
 ### Se placer dans le dossier des exemples :
 
-   cd /keystone/examples
+    cd /keystone/examples
 
 ### Créer un dossier pour ton projet :
 
