@@ -1,56 +1,43 @@
-# 📁 Structure Générale du Dépôt
+# Introduction à Keystone
 
-Chaque exemple contient :
+**Keystone** est une **Trusted Execution Environment (TEE)** open-source conçue pour les architectures RISC-V.conçue pour les architectures **RISC-V**. Elle permet de créer des environnements d'exécution isolés (enclaves) qui peuvent exécuter des applications sensibles en toute sécurité, avec une surface de confiance minimale.
+📄 Documentation officielle : https://docs.keystone-enclave.org
+✅ Version utilisée dans ce projet : Keystone 1.0.0
 
-- host/ → code exécuté sur l’hôte (hors enclave)
+# Créer son propre projet dans Keystone 
 
-- eapp/ → code exécuté dans l’enclave
+## Prérequis
 
-- CMakeLists.txt → permet de compiler et packager les deux
+Avant de commencer, veuillez vous assurer que :
+- Vous avez cloné le dépôt Keystone
+- Vous avez terminé toutes les étapes de "Testing Keystone with QEMU" comme indiqué dans la documentation officielle "https://docs.keystone-enclave.org/en/latest/Getting-Started/Running-Keystone-with-QEMU.html"
 
-Pour les compiler dans Keystone :
+## Étpaes de création d’un projet
 
-    Copier le dossier dans /keystone/examples/
+### Se placer dans le dossier des exemples :
 
-    Ajouter add_subdirectory(nom_du_dossier) dans /keystone/examples/CMakeLists.txt
+       cd /keystone/examples
 
-    Compiler : make -j$(nproc)
+### Créer un dossier pour ton projet :
 
-    Exécuter avec QEMU (doc officielle : https://docs.keystone-enclave.org/en/latest/Getting-Started/index.html)
+       mkdir my_exemple
+       cd my_example
 
-# 🔍 Analyse de l’exemple addition
+### Créer la structure suivante :
 
-🔹 host/addition_host.cpp
+       mkdir eapp
+       mkdir host
+       touch CMakeLists.txt
 
-Ce fichier gère :
+- eapp/ : Contient le code de l'enclave (le C exécuté de façon isolée).
+- host/ : Contient le code (c++) qui lance et gère l’enclave (initialisation Keystone, Edge calls, etc.).
+- CMakeLists.txt : Décrit la façon dont ton projet sera compilé.
+**Inspiration** : regarde les fichiers CMakeLists.txt des autres exemples (comme addition, password, etc.)
 
-- L'initialisation de l'enclave
+## Étape d’intégration dans Keystone : 
 
-- L'enregistrement des OCALLs
+### Ajouter ton projet dans le CMake principal :
 
-- Le lancement de l’enclave
+Ouvre le fichier keystone/examples/CMakeLists.txt et ajoute la ligne suivante à la fin :
 
-📌 Étapes importantes :
-
-
-🔹 eapp/addition.c
-C'est le programme dans l’enclave. Il effectue une addition simple de deux entiers et appelle une OCALL pour afficher le résultat.
-
-📌 Points clés :
-
-ocall_print_int(c);
-
-👉 OCALL : l’enclave demande à l’hôte d’afficher le résultat, car elle ne peut pas faire d’I/O seule.
-
-🔐 Analyse de l’exemple password
-
-🔹 host/password_host.cpp
-
-Même logique qu’avant mais avec un autre type d’OCALL, ici liée à un mot de passe :
-
-👉 Vérifie la correspondance via une fonction définie côté hôte.
-
-🔹 eapp/password.c
-
-# 🧩 Fonctionnement des OCALLs et Edge Wrappers
-
+        add_subdirectory(my_example)
