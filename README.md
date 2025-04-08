@@ -43,7 +43,7 @@ Ouvre le fichier keystone/examples/CMakeLists.txt et ajoute la ligne suivante à
 
 ### Compiler :
 
-    cd .. 
+    cd /keystone 
     make -j$(nproc)
 
 ### Exécuter sur QEMU :
