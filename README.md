@@ -55,4 +55,4 @@ Une fois votre projet compilé avec succès, vous pouvez le lancer avec la comma
 Cela démarrera l'environnement QEMU. Ensuite, suivez les étapes décrites dans la documentation officielle : https://docs.keystone-enclave.org/en/latest/Getting-Started/QEMU-Run-Tests.html
 Votre exécutable sera généré dans le répertoire suivant :
 
-   /usr/share/keystone/examples/my_example.ke
+    /usr/share/keystone/examples/my_example.ke
