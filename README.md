@@ -15,7 +15,7 @@ Avant de commencer, veuillez vous assurer que :
 
 ### Se placer dans le dossier des exemples :
 
-    cd /keystone/examples
+    cd keystone/examples
 
 ### Créer un dossier pour le projet :
 
@@ -44,7 +44,7 @@ Ouvre le fichier keystone/examples/CMakeLists.txt et ajoute la ligne suivante à
 
 ### Compiler :
 
-    cd /keystone 
+    cd keystone 
     make -j$(nproc)
 
 ### Exécuter sur QEMU :
