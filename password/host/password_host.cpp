@@ -16,7 +16,6 @@ unsigned long print_string(char* str) {
 
 unsigned long read_password(char* buf, size_t buf_size) {
     printf("Entrée utilisateur (max %lu caractères): ", buf_size - 1);
-    fflush(stdout); // force l'affichage du message a l'ecran
     fgets(buf, buf_size, stdin);
 
     // Supprimer le retour à la ligne éventuel
