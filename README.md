@@ -1,7 +1,7 @@
 # Introduction à Keystone
 
 **Keystone** est une **Trusted Execution Environment (TEE)** open-source conçue pour les architectures RISC-V.conçue pour les architectures **RISC-V**. Elle permet de créer des environnements d'exécution isolés (enclaves) qui peuvent exécuter des applications sensibles en toute sécurité, avec une surface de confiance minimale.
-📄 Documentation officielle : https://docs.keystone-enclave.org
+📄 Documentation officielle : https://docs.keystone-enclave.org 
 ✅ Version utilisée dans ce projet : Keystone 1.0.0
 
 # Créer son propre projet dans Keystone 
@@ -16,18 +16,18 @@ Avant de commencer, veuillez vous assurer que :
 
 ### Se placer dans le dossier des exemples :
 
-       cd /keystone/examples
+  cd /keystone/examples
 
 ### Créer un dossier pour ton projet :
 
-       mkdir my_exemple
-       cd my_example
+  mkdir my_exemple
+  cd my_example
 
 ### Créer la structure suivante :
 
-       mkdir eapp
-       mkdir host
-       touch CMakeLists.txt
+  mkdir eapp
+  mkdir host
+  touch CMakeLists.txt
 
 - eapp/ : Contient le code de l'enclave (le C exécuté de façon isolée).
 - host/ : Contient le code (c++) qui lance et gère l’enclave (initialisation Keystone, Edge calls, etc.).
