@@ -20,14 +20,14 @@ Avant de commencer, veuillez vous assurer que :
 
 ### Créer un dossier pour ton projet :
 
-   mkdir my_exemple
-   cd my_example
+    mkdir my_exemple
+    cd my_example
 
 ### Créer la structure suivante :
 
-   mkdir eapp
-   mkdir host
-   touch CMakeLists.txt
+    mkdir eapp
+    mkdir host
+    touch CMakeLists.txt
 
 - eapp/ : Contient le code de l'enclave (le C exécuté de façon isolée).
 - host/ : Contient le code (c++) qui lance et gère l’enclave (initialisation Keystone, Edge calls, etc.).
@@ -40,4 +40,4 @@ Avant de commencer, veuillez vous assurer que :
 
 Ouvre le fichier keystone/examples/CMakeLists.txt et ajoute la ligne suivante à la fin :
 
-        add_subdirectory(my_example)
+     add_subdirectory(my_example)
