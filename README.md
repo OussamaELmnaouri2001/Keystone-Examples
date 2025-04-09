@@ -8,20 +8,6 @@ Versions utilisées dans ce projet : Keystone commit [88c49ee](https://github.co
 
 ## Prérequis
 
-Avant de commencer, veuillez vous assurer que :
-
-- Vous avez cloné le dépôt Keystone
-- Vous avez terminé toutes les étapes de "Testing Keystone with QEMU" comme indiqué dans la documentation officielle "https://docs.keystone-enclave.org/en/latest/Getting-Started/Running-Keystone-with-QEMU.html"
-
-## Étpaes de création d’un projet
-
-### Se placer dans le dossier des exemples :
-
-    cd keystone/examples
-
-
-Vous avez cloné le dépôt du TEE Keystone :
-
 ```bash
 cd $HOME
 git clone https://github.com/keystone-enclave/keystone
@@ -55,12 +41,10 @@ touch CMakeLists.txt
 
 ## Étape d’intégration dans Keystone
 
-
 ### Ajouter le projet dans le CMake principal
 
     cd keystone 
     make -j$(nproc)
-
 
 Ouvre le fichier `keystone/examples/CMakeLists.txt` et ajoute la ligne suivante à la fin :
 
