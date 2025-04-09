@@ -43,9 +43,6 @@ touch CMakeLists.txt
 
 ### Ajouter le projet dans le CMake principal
 
-    cd keystone 
-    make -j$(nproc)
-
 Ouvre le fichier `keystone/examples/CMakeLists.txt` et ajoute la ligne suivante à la fin :
 
 ```diff
