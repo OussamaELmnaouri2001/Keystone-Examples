@@ -1,4 +1,4 @@
-Exécution de deux enclaves distinctes de manière séquentielle à l'aide d'un même hôte commun.
+Exécution de deux enclaves indépendantes de manière séquentielle à l'aide d'un même hôte commun.
 
 Chaque enclave(Eapps) est compilée séparément et implémente une logique spécifique :
 
