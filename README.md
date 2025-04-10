@@ -35,7 +35,7 @@ touch CMakeLists.txt
 
 - `eapp/` : Contient le code de l'enclave (le C exécuté de façon isolée).
 - `host/` : Contient le code (C++) qui lance et gère l’enclave (initialisation Keystone, Edge calls, etc.).
-- `CMakeLists.txt` : Décrit la façon dont ton projet sera compilé.
+- `CMakeLists.txt` : Décrit la façon dont votre projet sera compilé.
 
 **Inspiration** : regarde les fichiers `CMakeLists.txt` des autres exemples (comme [addition](./addition/), [password](./password/), etc.)
 
