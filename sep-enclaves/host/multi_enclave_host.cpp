@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <thread> //Pour lancer les deux enclaves en parallèle
 #include "host/keystone.h"
 #include "edge/edge_call.h"
 
@@ -53,6 +54,18 @@ int main(int argc, char** argv) {
 
     printf("\nLancement de la deuxième enclave (multiplication)...\n");
     launch_enclave(argv[2], argv[3], argv[4]);
+
+    //Lancement des enclaves en parallèle
+    /*
+    printf("Lancement des enclaves en parallèle...\n");
+
+    std::thread enclave1_thread(launch_enclave, argv[1], argv[3], argv[4]);
+    std::thread enclave2_thread(launch_enclave, argv[2], argv[3], argv[4]);
+
+    enclave1_thread.join();  // attendre la fin de la première enclave
+    enclave2_thread.join();  // attendre la fin de la deuxième enclave
+
+    printf("Les deux enclaves ont terminé.\n");*/
 
     return 0;
 }
