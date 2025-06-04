@@ -1,6 +1,5 @@
 #include "app/eapp_utils.h"
 #include "edge/edge_call.h"
-#include "app/string.h"
 #include "app/syscall.h"
 
 #define OCALL_SEND_RESULT 1
