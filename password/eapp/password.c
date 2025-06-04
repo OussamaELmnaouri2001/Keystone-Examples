@@ -1,5 +1,4 @@
 #include "eapp_utils.h"
-#include "string.h"
 #include "edge_call.h"
 #include <syscall.h>
 
